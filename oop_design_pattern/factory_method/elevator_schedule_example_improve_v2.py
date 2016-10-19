@@ -1,6 +1,16 @@
 import datetime
 from  constant import *
 
+class Singleton(type):
+
+    _instance = None
+
+    def __call__(cls, *args, **kwargs):
+        if cls._instance is None:
+            cls._instance = super(Singleton, cls).__call__(*args, **kwargs)
+        return cls._instance
+
+
 class ScheduleFactory(object):
 
     @staticmethod
@@ -49,7 +59,7 @@ class ElevatorController(object):
         self._cur_floor = destination
 
 
-class ThroughtputScheduler(object):
+class ThroughtputScheduler(object, metaclass=Singleton):
     """
     스케줄링 기능을 제공하는 클래스는 오직 하나의 객체만 생성해서 사용해도 충분하다.
     그러므로 싱글턴(Singleton) 패턴으로 설계하면 좋다.
@@ -59,7 +69,7 @@ class ThroughtputScheduler(object):
         return 0 #임의로 선택함
 
 
-class ResponseTimeSchedule(object):
+class ResponseTimeSchedule(object, metaclass=Singleton):
     """
     스케줄링 기능을 제공하는 클래스는 오직 하나의 객체만 생성해서 사용해도 충분하다.
     그러므로 싱글턴(Singleton) 패턴으로 설계하면 좋다.
@@ -78,13 +88,3 @@ if __name__ == "__main__":
 
     dynamic_scheduler = ElevatorManager(2, SCHEDULE_STRATEGY_ID.DYNAMIC)
     dynamic_scheduler.request_elevator(10, DIRECTION.UP)
-
-
-
-
-
-
-
-
-
-
