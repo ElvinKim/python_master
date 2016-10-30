@@ -1,5 +1,3 @@
-
-
 # def make_averager():
 #     count = 0
 #     total = 0
@@ -38,5 +36,3 @@ averager = make_averager()
 print(averager(10))
 print(averager(20))
 print(averager(30))
-
-

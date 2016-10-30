@@ -1,6 +1,8 @@
 import time
+import functools
 
 def clock(func):
+    @functools.wraps(func)
     def clocked(*args, **kwargs):
         start_time = time.perf_counter()
         result = func(*args, **kwargs)

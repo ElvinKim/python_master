@@ -23,6 +23,4 @@ print("="*60)
 
 print(averager.__closure__)
 print(averager.__closure__[0]) #<cell at 0x10070dbb8: list object at 0x10074ed88>
-print(averager.__closure__[0].cell_contents) #[10, 20, 30]
-
-
+print(averager.__closure__[0].cell_contents) #[10, 20, 30]`
