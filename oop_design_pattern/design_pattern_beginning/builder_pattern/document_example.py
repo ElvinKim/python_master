@@ -112,7 +112,7 @@ Builder pattern은 객체를 생성하는 면에서는 추상 팩토리 패턴�
 
 예를 들어 로봇을 만든다고 할 때
 
-robot = Robot(head, body, arms, legs, wings)라고 하면 순서라도 바뀌면 정상적으로 생서이 안된다.
+robot = Robot(head, body, arms, legs, wings)라고 하면 순서라도 바뀌면 정상적으로 생성이 안된다.
 이때
 director.set_head(head)
 	.set_arms(arms)
