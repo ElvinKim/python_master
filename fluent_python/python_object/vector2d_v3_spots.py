@@ -3,6 +3,8 @@ import math
 
 
 class Vector2d(object):
+    __slots__ = ("x", "y")
+
     typecode = 'd'
 
     def __init__(self, x, y):
@@ -60,23 +62,4 @@ class Vector2d(object):
 
 
 if __name__ == "__main__":
-    v1 = Vector2d(3, 4)
-    v2 = Vector2d(3.1, 4.2)
-    v3 = Vector2d(4, 3)
-
-    print(v1.x, v1.y)
-    x, y = v1
-    print(x, y)
-    print(v1)
-    v1_clone = eval(repr(v1))
-    print(v1 == v1_clone)
-    octets = bytes(v1)
-    print(octets)
-    print(abs(v1))
-    print(bool(v1))
-    print(bool(Vector2d(0,0)))
-    print(hash(Vector2d(3, 4)))
-    print("*" * 20, " hash ", "*" * 20)
-    print(hash(v1))
-    print(hash(v2))
-    print(hash(v3))
+    pass
