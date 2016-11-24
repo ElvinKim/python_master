@@ -37,6 +37,3 @@ if __name__ == "__main__":
 
     print(getgeneratorstate(my_coro2))  # GEN_CLOSED
 
-
-
-
