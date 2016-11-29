@@ -26,7 +26,7 @@ def get_flag(cc):
 
 
 def show(text):
-    print(text, end="")
+    print(text, end=" ")
     sys.stdout.flush()
 
 
