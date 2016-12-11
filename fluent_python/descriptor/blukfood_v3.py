@@ -22,8 +22,8 @@ class LineItem(object):
 
     def __init__(self, description, weight, price):
         self.description = description
-        self.weight = weight #이때 Quantity 의 __set__ 함수가 호출 된다
-        self.price = price #이때 Quantity 의 __set__ 함수가 호출 된다
+        self.weight = weight  #이때 Quantity 의 __set__ 함수가 호출 된다
+        self.price = price  #이때 Quantity 의 __set__ 함수가 호출 된다
 
     def subtotal(self):
         return self.weight * self.price

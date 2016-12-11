@@ -14,7 +14,7 @@ class Quantity(object):
     def __set__(self, instance, value):
         if value > 0:
             setattr(instance, self.storage_name, value)
-        else :
+        else:
             raise ValueError("value must be > 0")
 
 
