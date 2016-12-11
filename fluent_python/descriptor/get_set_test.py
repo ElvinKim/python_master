@@ -1,5 +1,4 @@
-
-class Descriptior(object):
+class Descriptor(object):
 
     def __init__(self):
         self.a = None
@@ -13,11 +12,10 @@ class Descriptior(object):
         print("\t", self, instance, value)
 
 
-
 class Manager(object):
 
-    m1 = Descriptior()
-    m2 = Descriptior()
+    m1 = Descriptor()
+    m2 = Descriptor()
 
 
 if __name__ == "__main__":
